@@ -1,6 +1,7 @@
 import os
 import socket , threading
-HOST="10.22.48.120"
+import time
+HOST="140.134.174.3"
 PORT = 60000
 
 
@@ -14,7 +15,8 @@ def listen():
 		data = b""
 		while not data:
 			data = s.recv(1024)
-			print("\b\b:", data.decode(), "\n> ", end = "")
+			print("\b\b\b\b\b\b\b\b\b\b\b\b\b:", data.decode(), "\n> ", end = "")
+			time.sleep(0.5)
 
 def get_input():
 	global sent
@@ -27,6 +29,7 @@ def get_input():
 			cls()
 		else:
 			sent = data
+		time.sleep(0.5)
 
 
 
@@ -46,4 +49,5 @@ while True:
 		if sent:
 			s.sendall(sent)
 			sent = b""
+		time.sleep(0.5)
 s.close()
