@@ -6,6 +6,10 @@ PORT = 60000
 
 
 s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+
+twosides_Record = ""
+opposite_Record = ""
+
 def cls():
     	os.system('clear')
             
@@ -15,7 +19,9 @@ def listen():
 		data = b""
 		while not data:
 			data = s.recv(1024)
-			print("\b\b\b\b\b\b\b\b\b\b\b\b\b:", data.decode(), "\n> ", end = "")
+			if(data):
+				twosides_Record = twosides_Record + data + "\n"
+				opposite_Racord = opposite_Racorf + data + "\n"
 			time.sleep(0.5)
 
 def get_input():
