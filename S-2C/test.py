@@ -1,12 +1,14 @@
-import socket , threading
-import time
-def ewe():
-	while True:
-		input("> ")
-		time.sleep(.5)
-ok = threading.Thread(target = ewe)
-ok.start()
-time.sleep(1)
-print('\033[1A',end="\r")
-print("\nowo")
+
+
+term = ""
+
+match term:
+    case "ewe":
+        print("ewe")
+    case "owo":
+        print("owo")
+    case "uwu":
+    	print("uwu")
+    case _:
+    	print("sending...")
 

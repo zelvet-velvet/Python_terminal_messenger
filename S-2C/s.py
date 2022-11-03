@@ -1,7 +1,7 @@
 
 
 import socket, threading
-HOST = "10.22.48.120"
+HOST = "8.8.8.8"
 PORT = 60000
 
 def listen(socket):
